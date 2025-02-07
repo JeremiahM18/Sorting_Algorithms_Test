@@ -26,6 +26,7 @@ public class Graphing extends ApplicationFrame {
                 chartTitle, "Elements", "Time",
                 createDataset(), PlotOrientation.VERTICAL, true, true, false);
 
+
         ChartPanel chartPanel = new ChartPanel(xylineChart);
         chartPanel.setPreferredSize(new java.awt.Dimension(800, 600));
         final XYPlot xyPlot = xylineChart.getXYPlot();
@@ -47,6 +48,31 @@ public class Graphing extends ApplicationFrame {
 
         xyPlot.setRenderer(renderer);
         setContentPane(chartPanel);
+    }
+
+    private XYDataset createkset() {
+        final XYSeriesCollection dataset1 = new XYSeriesCollection();
+        Tester tester = new Tester();
+
+        SortingAlg[] sorts = {new BubbleSort(), new InsertionSort(),
+                new MergeSort(), new SelectionSort(),
+                new QuickSort(), new ShellSort()};
+        int[] arr = {100, 500, 1000, 2000, 5000, 10000, 20000, 75000, 150000};
+
+        String[] sortNames = {"BubbleKSort", "InsertionKSort", "MergeKSort",
+        "SelectionKSort", "QuickKSort", "ShellKSort"};
+
+        for (int i = 0; i < sorts.length; i++) {
+            XYSeries series = new XYSeries(sortNames[i]);
+
+            for(int j = 0; j < arr.length; j++) {
+                double yvalue = tester.testKVar(20, arr[j], sorts[i]);
+                series.add(arr[j], yvalue);
+            }
+
+            dataset1.addSeries(series);
+        }
+        return dataset1;
     }
 
     private XYDataset createDataset() {

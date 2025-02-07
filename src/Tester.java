@@ -53,7 +53,7 @@ public class Tester {
         return input;
     }
 
-    public static double testKVar(int iterations, int size, SortingAlg sort){
+    public double testKVar(int iterations, int size, SortingAlg sort){
         Random rand = new Random();
         int[] array = new int[size];
 

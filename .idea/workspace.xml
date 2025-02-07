@@ -5,19 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="325809a8-88d9-4c62-b0f1-ec5c2e3eb726" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/jfree_jfreechart.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Graphing.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/MainKSort.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Sorting_Algorithms_Test.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Sorting_Algorithms_Test.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/BubbleSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BubbleSort.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/InsertionSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/InsertionSort.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MergeSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MergeSort.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/QuickSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/QuickSort.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SelectionSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SelectionSort.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ShellSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ShellSort.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Graphing.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Graphing.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Tester.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Tester.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -98,7 +87,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1738880644277</updated>
-      <workItem from="1738880645356" duration="17713000" />
+      <workItem from="1738880645356" duration="20068000" />
     </task>
     <servers />
   </component>
