@@ -2,7 +2,7 @@
 * Question 6: Implement sorting a list using Selection Sort algorithm.
  */
 
-public class SelectionSort {
+public class SelectionSort implements SortingAlg {
 
     public static int[] selectionSort(int[] arr) {
         int a = arr.length;
@@ -21,4 +21,8 @@ public class SelectionSort {
         return arr;
     }
 
+    @Override
+    public int[] sorty(int[] A) {
+        return selectionSort(A);
+    }
 }

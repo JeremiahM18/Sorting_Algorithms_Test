@@ -2,7 +2,7 @@
 * Question 6: Implement sorting a list using Bubble Sort algorithm.
  */
 
-public class BubbleSort {
+public class BubbleSort implements SortingAlg{
 
     public static int[] bubbleSort(int[] arr) {
         int a = arr.length;
@@ -28,4 +28,8 @@ public class BubbleSort {
         return arr;
     }
 
+    @Override
+    public int[] sorty(int[] A) {
+        return bubbleSort(A);
+    }
 }

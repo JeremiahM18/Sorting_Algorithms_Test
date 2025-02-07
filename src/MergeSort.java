@@ -72,6 +72,6 @@ public class MergeSort implements SortingAlg {
 
     @Override
     public int[] sorty(int[] A) {
-        return new int[0];
+        return mergeSort(A);
     }
 }

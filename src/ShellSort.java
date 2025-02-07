@@ -3,7 +3,7 @@
  */
 
 
-public class ShellSort {
+public class ShellSort implements SortingAlg{
 
     public static int[] ShellSort(int[] arr) {
         int a = arr.length;
@@ -27,5 +27,10 @@ public class ShellSort {
 
         }
         return arr;
+    }
+
+    @Override
+    public int[] sorty(int[] A) {
+        return ShellSort(A);
     }
 }

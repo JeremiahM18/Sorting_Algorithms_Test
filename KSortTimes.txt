@@ -1,0 +1,66 @@
+Sorting algorithm - BubbleSort
+Sorted 100 elements in 8.47E-5 s(avg)
+Sorted 500 elements in 0.0030114 s(avg)
+Sorted 1000 elements in 0.0015743 s(avg)
+Sorted 2000 elements in 0.0037611 s(avg)
+Sorted 5000 elements in 0.0204864 s(avg)
+Sorted 10000 elements in 0.0727124 s(avg)
+Sorted 20000 elements in 0.3139001 s(avg)
+Sorted 75000 elements in 5.6215159 s(avg)
+Sorted 150000 elements in 23.6244307 s(avg)
+
+Sorting algorithm - InsertionSort
+Sorted 100 elements in 9.51E-5 s(avg)
+Sorted 500 elements in 6.914E-4 s(avg)
+Sorted 1000 elements in 0.0017144 s(avg)
+Sorted 2000 elements in 0.0010109 s(avg)
+Sorted 5000 elements in 0.0050249 s(avg)
+Sorted 10000 elements in 0.0028837 s(avg)
+Sorted 20000 elements in 0.0101413 s(avg)
+Sorted 75000 elements in 0.1373237 s(avg)
+Sorted 150000 elements in 0.6902088 s(avg)
+
+Sorting algorithm - MergeSort
+Sorted 100 elements in 2.611E-4 s(avg)
+Sorted 500 elements in 8.486E-4 s(avg)
+Sorted 1000 elements in 6.494E-4 s(avg)
+Sorted 2000 elements in 7.32E-4 s(avg)
+Sorted 5000 elements in 0.0010495 s(avg)
+Sorted 10000 elements in 0.0019662 s(avg)
+Sorted 20000 elements in 0.0041401 s(avg)
+Sorted 75000 elements in 0.0155797 s(avg)
+Sorted 150000 elements in 0.0094476 s(avg)
+
+Sorting algorithm - SelectionSort
+Sorted 100 elements in 1.221E-4 s(avg)
+Sorted 500 elements in 0.0017551 s(avg)
+Sorted 1000 elements in 0.0015589 s(avg)
+Sorted 2000 elements in 0.0054282 s(avg)
+Sorted 5000 elements in 0.0328838 s(avg)
+Sorted 10000 elements in 0.0589168 s(avg)
+Sorted 20000 elements in 0.1680378 s(avg)
+Sorted 75000 elements in 2.0147544 s(avg)
+Sorted 150000 elements in 8.7630406 s(avg)
+
+Sorting algorithm - QuickSort
+Sorted 100 elements in 2.103E-4 s(avg)
+Sorted 500 elements in 0.0021552 s(avg)
+Sorted 1000 elements in 3.997E-4 s(avg)
+Sorted 2000 elements in 4.042E-4 s(avg)
+Sorted 5000 elements in 9.836E-4 s(avg)
+Sorted 10000 elements in 0.0024476 s(avg)
+Sorted 20000 elements in 0.0023916 s(avg)
+Sorted 75000 elements in 0.0126816 s(avg)
+Sorted 150000 elements in 0.0227249 s(avg)
+
+Sorting algorithm - ShellSort
+Sorted 100 elements in 7.69E-5 s(avg)
+Sorted 500 elements in 4.461E-4 s(avg)
+Sorted 1000 elements in 0.0011227 s(avg)
+Sorted 2000 elements in 0.0017769 s(avg)
+Sorted 5000 elements in 0.002661 s(avg)
+Sorted 10000 elements in 0.0040931 s(avg)
+Sorted 20000 elements in 0.0068383 s(avg)
+Sorted 75000 elements in 0.0194828 s(avg)
+Sorted 150000 elements in 0.0421271 s(avg)
+

@@ -2,7 +2,7 @@
 * Question 6: Implement sorting a list using insertion sort algorithm.
  */
 
-public class InsertionSort {
+public class InsertionSort implements SortingAlg{
 
     // Create a method with array as parameter for unsorted list
     public static int[] insertionSort(int[] arr){
@@ -30,4 +30,8 @@ public class InsertionSort {
     }
 
 
+    @Override
+    public int[] sorty(int[] A) {
+        return insertionSort(A);
+    }
 }

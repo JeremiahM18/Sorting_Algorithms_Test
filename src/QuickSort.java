@@ -3,7 +3,7 @@
  */
 
 
-public class QuickSort {
+public class QuickSort implements SortingAlg{
 
     public static int[] quickSort(int[] arr, int left, int right) {
         if (left < right) {
@@ -37,5 +37,12 @@ public class QuickSort {
         int temp = arr[i];
         arr[i] = arr[j];
         arr[j] = temp;
+    }
+
+    @Override
+    public int[] sorty(int[] A) {
+        quickSort(A, 0,A.length - 1);
+        return A;
+
     }
 }
