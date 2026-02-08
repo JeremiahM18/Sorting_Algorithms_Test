@@ -5,6 +5,7 @@ public class Tester {
    SortingAlg salg;
 
     public Tester(SortingAlg sa){
+
         salg = sa;
     }
     public Tester(){

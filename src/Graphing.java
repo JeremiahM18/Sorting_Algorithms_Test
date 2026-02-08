@@ -5,48 +5,82 @@
  */
 import java.awt.Color;
 import java.awt.BasicStroke;
+import java.awt.Dimension;
 
+import org.jfree.chart.ui.ApplicationFrame;
+
+import javax.swing.SwingUtilities;
+
+import org.jfree.chart.ChartFactory;
 import org.jfree.chart.ChartPanel;
 import org.jfree.chart.JFreeChart;
+
+import org.jfree.chart.plot.PlotOrientation;
+import org.jfree.chart.plot.XYPlot;
+
+import org.jfree.chart.renderer.xy.XYLineAndShapeRenderer;
+
 import org.jfree.data.xy.XYDataset;
 import org.jfree.data.xy.XYSeries;
-import org.jfree.chart.ui.ApplicationFrame;
-//import org.jfree.ui.RefineryUtilities;
-import org.jfree.chart.plot.XYPlot;
-import org.jfree.chart.ChartFactory;
-import org.jfree.chart.plot.PlotOrientation;
 import org.jfree.data.xy.XYSeriesCollection;
-import org.jfree.chart.renderer.xy.XYLineAndShapeRenderer;
 
 public class Graphing extends ApplicationFrame {
 
     public Graphing(String applicationTitle,String chartTitle) {
         super(applicationTitle);
+
+        XYDataset dataset1 = createDataset();
+        XYDataset dataset2 = createkset();
+        //XYDataset dataset = useKSet ? createkset() : createDataset();
+
         JFreeChart xylineChart = ChartFactory.createXYLineChart(
                 chartTitle, "Elements", "Time",
                 createDataset(), PlotOrientation.VERTICAL, true, true, false);
 
+        XYPlot xyPlot = xylineChart.getXYPlot();
+        XYLineAndShapeRenderer renderer1 = new XYLineAndShapeRenderer();
+        xyPlot.setDataset(0, dataset1);
+        xyPlot.setRenderer(0, renderer1);
 
+        XYLineAndShapeRenderer renderer2 = new XYLineAndShapeRenderer();
+        xyPlot.setDataset(1, dataset2);
+        xyPlot.setRenderer(1, renderer2);
+
+        //XYLineAndShapeRenderer renderer = new XYLineAndShapeRenderer();
+        // Colors for testing times of Sorting Algorithms
+        renderer1.setSeriesPaint(0, Color.RED);   // Bubble Sort
+        renderer1.setSeriesPaint(1, Color.ORANGE);  // Insertion Sort
+        renderer1.setSeriesPaint(2, Color.GREEN); // Merge Sort
+        renderer1.setSeriesPaint(3, Color.YELLOW); // Selection Sort
+        renderer1.setSeriesPaint(4, Color.BLUE); // Quick Sort
+        renderer1.setSeriesPaint(5, Color.MAGENTA); // Shell Sort
+
+        // Colors for testing times of KSort
+        renderer2.setSeriesPaint(0, Color.RED.brighter()); // Bubble KSort
+        renderer2.setSeriesPaint(1, Color.ORANGE.brighter()); // Insertion KSort
+        renderer2.setSeriesPaint(2, Color.GREEN.brighter()); // Merge KSort
+        renderer2.setSeriesPaint(3, Color.YELLOW.brighter()); // Selection KSort
+        renderer2.setSeriesPaint(4, Color.BLUE.brighter()); // Quick KSort
+        renderer2.setSeriesPaint(5, Color.MAGENTA.brighter()); // Shell KSort
+
+        // Computed dataset colors
+//        renderer.setSeriesStroke(0, new BasicStroke(2.0f));
+//        renderer.setSeriesStroke(1, new BasicStroke(2.0f));
+//        renderer.setSeriesStroke(2, new BasicStroke(2.0f));
+//        renderer.setSeriesStroke(3, new BasicStroke(2.0f));
+//        renderer.setSeriesStroke(4, new BasicStroke(2.0f));
+//        renderer.setSeriesStroke(5, new BasicStroke(2.0f));
+
+        for(int i = 0; i < 6; i++){
+            renderer1.setSeriesStroke(i, new BasicStroke(2.0f));
+            renderer2.setSeriesStroke(i, new BasicStroke(2.0f,
+                    BasicStroke.CAP_BUTT, BasicStroke.JOIN_BEVEL, 0, new float[]{4.0f}, 0.0f));
+        }
+
+        //xyPlot.setRenderer(renderer);
         ChartPanel chartPanel = new ChartPanel(xylineChart);
         chartPanel.setPreferredSize(new java.awt.Dimension(800, 600));
-        final XYPlot xyPlot = xylineChart.getXYPlot();
-
-        XYLineAndShapeRenderer renderer = new XYLineAndShapeRenderer();
-        renderer.setSeriesPaint(0, Color.RED);   // Bubble Sort
-        renderer.setSeriesPaint(1, Color.BLUE);  // Insertion Sort
-        renderer.setSeriesPaint(2, Color.GREEN); // Merge Sort
-        renderer.setSeriesPaint(3, Color.YELLOW); // Selection Sort
-        renderer.setSeriesPaint(4, Color.DARK_GRAY); // Quick Sort
-        renderer.setSeriesPaint(5, Color.BLACK); // Shell Sort
-
-        renderer.setSeriesStroke(0, new BasicStroke(2.0f));
-        renderer.setSeriesStroke(1, new BasicStroke(2.0f));
-        renderer.setSeriesStroke(2, new BasicStroke(2.0f));
-        renderer.setSeriesStroke(3, new BasicStroke(2.0f));
-        renderer.setSeriesStroke(4, new BasicStroke(2.0f));
-        renderer.setSeriesStroke(5, new BasicStroke(2.0f));
-
-        xyPlot.setRenderer(renderer);
+        //final XYPlot xyPlot = xylineChart.getXYPlot();
         setContentPane(chartPanel);
     }
 
@@ -150,16 +184,19 @@ public class Graphing extends ApplicationFrame {
         shellSort.add(150000, 0.056921195000000015);
         dataset.addSeries(shellSort);
         return dataset;
-
     }
 
+
+
     public static void main(String[] args) {
-        Graphing chart = new Graphing(
+        SwingUtilities.invokeLater(() -> {
+                Graphing chart1 = new Graphing(
                 "Sorting Algorithm Performance",
                 "Sorting Algorithms Performance Comparison");
-        chart.pack();
+                chart1.pack();
         ///RefineryUtilities.centerFrameOnScreen(chart);
-        chart.setVisible(true);
+        chart1.setVisible(true);
+        });
 
     }
 }

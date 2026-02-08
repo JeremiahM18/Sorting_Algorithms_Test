@@ -18,17 +18,11 @@ public class MergeSort implements SortingAlg {
         int[] left = new int[mid];
         int[] right = new int[a - mid];
 
-
-        // Copy data into left and right subarrays
-//        System.arraycopy(arr, 0, left, 0, mid);
-//        System.arraycopy(arr, mid, right, 0, a - mid);
-
         // Recursively sort both halves
         left = mergeSort(left);
         right = mergeSort(right);
 
         return merge(left, right);
-
     }
 
     // Create a method with two arraylist as parameters to initialize variables
